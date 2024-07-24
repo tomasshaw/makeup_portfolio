@@ -28,27 +28,89 @@
 
     <main class="main-content">
       <div class="grid">
-        <img src="images/ABRU.jpg" alt="ABRU">
-        <img src="images/ANALOGIAS.jpg" alt="ANALOGIAS">
-        <img src="images/ANTO.jpg" alt="ANTO">
-        <img src="images/ANTO2.jpg" alt="ANTO2">
-        <img src="images/ART.jpg" alt="ART">
-        <img src="images/BRUDER.jpg" alt="BRUDER">
-        <img src="images/CARMEN.jpg" alt="CARMEN">
-        <img src="images/CLAIRE.jpg" alt="CLAIRE">
-        <img src="images/DEB.jpg" alt="DEB">
-        <img src="images/DRAG.jpg" alt="DRAG">
-        <img src="images/EDIT.jpg" alt="EDIT">
-        <img src="images/FINAL.jpg" alt="FINAL">
-        <img src="images/GLITTER.jpg" alt="GLITTER">
-        <img src="images/HUMDRUM.jpg" alt="HUMDRUM">
-        <img src="images/HUMDRUM2.jpg" alt="HUMDRUM2">
-        <img src="images/LOMANAGEMENT.jpg" alt="LOMANAGEMENT">
-        <img src="images/MARCOS.jpg" alt="MARCOS">
-        <img src="images/MATA.jpg" alt="MATA">
+        <div class="grid-item">
+          <img src="images/ABRU.jpg" alt="ABRU">
+          <div class="grid-item-overlay">ABRU</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/ANALOGIAS.jpg" alt="ANALOGIAS">
+          <div class="grid-item-overlay">ANALOGIAS</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/ANTO.jpg" alt="ANTO">
+          <div class="grid-item-overlay">ANTO</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/ANTO2.jpg" alt="ANTO2">
+          <div class="grid-item-overlay">ANTO2</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/ART.jpg" alt="ART">
+          <div class="grid-item-overlay">ART</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/BRUDER.jpg" alt="BRUDER">
+          <div class="grid-item-overlay">BRUDER</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/CARMEN.jpg" alt="CARMEN">
+          <div class="grid-item-overlay">CARMEN</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/CLAIRE.jpg" alt="CLAIRE">
+          <div class="grid-item-overlay">CLAIRE</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/DEB.jpg" alt="DEB">
+          <div class="grid-item-overlay">DEB</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/DRAG.jpg" alt="DRAG">
+          <div class="grid-item-overlay">DRAG</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/EDIT.jpg" alt="EDIT">
+          <div class="grid-item-overlay">EDIT</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/FINAL.jpg" alt="FINAL">
+          <div class="grid-item-overlay">FINAL</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/GLITTER.jpg" alt="GLITTER">
+          <div class="grid-item-overlay">GLITTER</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/HUMDRUM.jpg" alt="HUMDRUM">
+          <div class="grid-item-overlay">HUMDRUM</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/HUMDRUM2.jpg" alt="HUMDRUM2">
+          <div class="grid-item-overlay">HUMDRUM2</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/LOMANAGEMENT.jpg" alt="LOMANAGEMENT">
+          <div class="grid-item-overlay">LOMANAGEMENT</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/MARCOS.jpg" alt="MARCOS">
+          <div class="grid-item-overlay">MARCOS</div>
+        </div>
+        <div class="grid-item">
+          <img src="images/MATA.jpg" alt="MATA">
+          <div class="grid-item-overlay">MATA</div>
+        </div>
       </div>
     </main>
   </div>
+  <script>
+    document.querySelectorAll('.grid-item').forEach(item => {
+      item.addEventListener('click', event => {
+        const imgName = event.currentTarget.querySelector('img').alt;
+        window.open(`${window.location.origin}/${imgName}`, '_blank');
+      });
+    });
+  </script>
 </body>
 
 </html>
